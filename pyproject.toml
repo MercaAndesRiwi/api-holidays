@@ -1,0 +1,28 @@
+[project]
+name = "api-holidays"
+version = "0.1.0"
+description = "Public holidays ingestion service (Nager.Date) for MercadAndes"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.27.0",
+    "sqlalchemy>=2.0.0",
+    "psycopg[binary]",
+    "python-dotenv>=1.2.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = ["E501"]

@@ -1,0 +1,1 @@
+"""api-holidays package."""
