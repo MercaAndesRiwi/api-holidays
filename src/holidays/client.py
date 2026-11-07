@@ -37,7 +37,7 @@ class NagerDateClient:
 
     def fetch_holidays(self, country_code: str, year: int) -> list[dict[str, Any]]:
         """Fetch the list of holidays for a given country code and year with retries."""
-        url = f"{self.base_url}/{country_code}/{year}"
+        url = f"{self.base_url}/{year}/{country_code}"
 
         owns_client = self._client is None
         client = self._get_client()
